@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.apple.musicstructure.PaymentActivity">
+
+    <TextView
+        android:id="@+id/back_to_search"
+        style="@style/BackToLib"
+        android:text="@string/search" />
+
+    <TextView
+        style="@style/Description"
+        android:layout_below="@id/back_to_search"
+        android:text="@string/payment_description" />
+
+    <include
+        layout="@layout/music_player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
