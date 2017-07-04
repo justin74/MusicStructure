@@ -12,8 +12,8 @@
     <string name="albums_description">This Activity shows up all albums on user device, and sort alphabetically.</string>
     <string name="songs_description">This Activity shows up all songs on user device, and sort alphabetically.</string>
     <string name="search_description">This Activity shows up user search result.</string>
-    <string name="payment_description">This Activity shows up payment information.
-        User can choose a payment method, use credit card or use Paypal API.</string>
+    <string name="payment_description">This Activity shows up payment information.User can choose
+        a payment method, use credit card or use Paypal API.</string>
     <string name="search_query_hint">Search Music</string>
     <string name="search_result_description">When user click album information, will intent to payment activity.</string>
     <string name="album_name">KID A</string>
