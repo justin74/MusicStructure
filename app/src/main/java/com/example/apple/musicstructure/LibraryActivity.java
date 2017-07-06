@@ -18,36 +18,19 @@ public class LibraryActivity extends AppCompatActivity {
         TextView songs = (TextView) findViewById(R.id.songs);
         TextView search = (TextView) findViewById(R.id.search);
 
-        artists.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent artistsIntent = new Intent(LibraryActivity.this, ArtistsActivity.class);
-                startActivity(artistsIntent);
-            }
-        });
-
-        albums.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent albumsIntent = new Intent(LibraryActivity.this, AlbumsActivity.class);
-                startActivity(albumsIntent);
-            }
-        });
-
-        songs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent songsIntent = new Intent(LibraryActivity.this, SongsActivity.class);
-                startActivity(songsIntent);
-            }
-        });
-
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent searchIntent = new Intent(LibraryActivity.this, SearchActivity.class);
-                startActivity(searchIntent);
-            }
-        });
+        setListenerOpenActivity(artists, ArtistsActivity.class);
+        setListenerOpenActivity(albums, AlbumsActivity.class);
+        setListenerOpenActivity(songs, SongsActivity.class);
+        setListenerOpenActivity(search, SearchActivity.class);
     }
+
+    private void setListenerOpenActivity(View viewToSet, final Class activityToOpen){
+        viewToSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LibraryActivity.this, activityToOpen);
+                startActivity(intent);
+            }
+        });
+    };
 }
